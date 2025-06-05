@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="img/smile.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet"><link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>to-do</title>
+</head>
+<body>
+<div class="container">
+  <h2>TO-DO list</h2>
+  <section class="container-add">
+    <input type="text" id="taskInput" placeholder="..." max="15" onKeyPress="if(this.value.length === 17) return false">
+    <button id="addTaskBtn">Add</button>
+  </section>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="active">Active Tasks</button>
+    <button class="tab-btn" data-tab="deleted">Delete Tasks</button>
+  </div>
+  <div class="tab-content">
+    <ul id="activeTasks" class="task-list active"></ul>
+    <ul id="deletedTasks" class="task-list"></ul>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
